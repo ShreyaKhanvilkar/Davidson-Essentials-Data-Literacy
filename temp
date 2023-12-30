@@ -1,0 +1,21 @@
+# Shreya Khanvilkar
+# 12-30-2023
+# Wrangling College Scorecard Data
+
+library(tidyverse)
+
+college_sc <- read_csv("/Users/shreyakhanvilkar/college/programming/MERGED2021_22_PP.csv")
+
+glimpse(college_sc)
+
+colnames(college_sc)
+
+# the data that I downloaded from the website was VERY different from the data described/shown
+# using the following, columns are reduced to get only what is needed
+col <- college_sc[c("UNITID", "INSTNM", "CITY", "STABBR", "ZIP", "ACCREDAGENCY", "LATITUDE", "LONGITUDE", "MENONLY", "WOMENONLY", "ADM_RATE", "SAT_AVG", "UGDS", "UGDS_WHITE", "UGDS_BLACK", "UGDS_HISP", "UGDS_ASIAN", "UGDS_AIAN", "UGDS_NHPI", "UGDS_2MOR", "COSTT4_A", "AVGFACSAL", "AGE_ENTRY", "FEMALE", "FIRST_GEN", "MEDIAN_HH_INC", "POVERTY_RATE", "UNEMP_RATE")]
+
+head(col)
+
+tail(col)
+
+names(col)
